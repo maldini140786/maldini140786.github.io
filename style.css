@@ -1,0 +1,32 @@
+/* Feuille de cahier : encre noire, marge rouge. Une seule couleur d'accent, comme dans le jeu. */
+:root {
+  --paper: #f7f5ef;
+  --ink: #111111;
+  --pencil: #5c5c5c;
+  --rule: rgba(60, 90, 140, 0.10);
+  --margin: rgba(200, 60, 50, 0.35);
+  --blood: #b3141a;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 18px/1.55 "Patrick Hand", "Comic Sans MS", "Marker Felt", system-ui, sans-serif;
+  background-image: repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px);
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; border-left: 2px solid var(--margin); }
+@media (min-width: 760px) { main { padding: 48px 40px 80px; } }
+h1, h2 { font-family: "Permanent Marker", "Comic Sans MS", cursive; font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(34px, 8vw, 52px); margin: 0 0 8px; transform: rotate(-1.5deg); }
+h2 { font-size: 24px; margin: 36px 0 8px; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+a { color: var(--blood); text-underline-offset: 3px; }
+a:focus-visible { outline: 3px dashed var(--ink); outline-offset: 3px; }
+.meta { color: var(--pencil); }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 17px; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border: 2px solid var(--ink); background: #fff; }
+th { background: var(--paper); }
+.table { overflow-x: auto; }
+footer { margin-top: 48px; color: var(--pencil); font-size: 16px; }
